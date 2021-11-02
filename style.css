@@ -1,0 +1,428 @@
+/* CSS FILE */
+
+  /*
+  Ana Leite | up201808111
+  WD2 | Projeto 1 - 03.11.2021
+  */
+
+  /* RESET ______________________________________*/
+
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+
+
+  /* GENERAL SETTINGS ______________________________________*/
+
+
+  /* local variable font*/
+  @font-face {
+    font-family: Space;
+    src: url(./font/SpaceGrotesk[wght].ttf);
+  }
+
+  body {
+    /* font */
+    font-family: 'Space';
+    font-weight: 400;
+    font-stretch: 100%;
+    color: white;
+    
+    /* bg */
+    background-image: url("./images/bg-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    height: 100vh;
+  }
+
+
+  /* FONT SETTINGS */
+  p {
+    font-size: 4vw;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  /* classes */
+  .underline {
+    text-decoration: underline;
+  }
+
+  .up {
+    text-transform: uppercase;
+  }
+
+  /* variable font */
+  .variable {
+    font-variation-settings: "wght" 300;
+    transition: 0.5s all;
+  }
+ 
+  /* mouse hover -> variable font  */
+  .variable:hover {
+    transition: 0.5s all;
+    font-variation-settings: "wght" 700;  
+    letter-spacing: 0.3vw;
+  }
+
+  /* selection color */
+  ::selection {
+    background: #d9ec32;
+    color: black;
+  }
+  
+  /* CURSOR */
+  .cursor {
+    cursor: url('/images/icon-2.png'), auto;
+  }
+
+
+  /* HEADER ______________________________________*/
+  header {
+    position: fixed;
+    margin-top: 2vh;
+    margin-left: 5vw;
+    z-index: 1;
+  }
+
+  nav a {
+    font-size: 1.3vw;
+    text-decoration: none;
+    color: white;
+    padding-right: 2vw;
+  }
+
+  nav a:hover {
+    color: rgb(100, 100, 100);
+  }
+
+  .down {
+    position: absolute;
+    top: 90vh;
+    left: 90vw;
+    font-size: 2vw;
+    animation: move 0.6s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes move {
+    0% { transform: translate(0px, 0px); }
+    100% { transform: translate(0px, 3px); }
+  }
+ 
+
+  /* MAIN ______________________________________*/
+  /* alert */
+  .alert {
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    z-index: 2;
+    width: 40vw;
+    height:20vh;
+    padding: 5% 0;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: rotate(-3deg);
+    box-shadow: 7px 7px 20px #d9ec32;
+    border-radius: 20px;
+    color: white;
+    font-size: 2.7vw;
+  }
+
+  .closebtn {
+    text-decoration: underline;
+    cursor: pointer; 
+    position: absolute;
+    bottom: 20%;
+  }
+
+  .closebtn:hover {
+    color: #d9ec32;
+  }
+
+  /* main */
+  main {
+    display: flex;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+
+  /* scrollable classes */
+  .s1 {
+    min-width: 95vw;
+    margin-top: 5vh;
+    padding-left: 5vw;
+    font-size: 10vw;
+    font-weight: 600;
+  }
+
+  .s2 {
+    min-width: 95vw;
+    padding-left: 5vw;
+    margin-top: 16%;
+    cursor: pointer;
+  }
+
+  .s2 p{
+    font-size: 4vw;
+    position: relative;
+    transform: scale(1) ;
+    transform-origin: left;
+    transition: transform .3s;
+  }
+    .s2 p:hover {
+      transform: scale(0.8) ;
+      transform-origin: left;
+      transition: transform .3s;
+    }
+
+  .s3 {
+    font-size: 4vw;
+    min-width: 95vw;
+    padding-left: 5vw;
+    margin-top: 23%;
+  }
+
+  .s4 {
+    font-size: 4vw;
+    min-width: 95vw;
+    padding-left: 5vw;
+    margin-top: 34%;
+  }
+
+    .site {
+      color:rgb(100, 100, 100);
+    }
+
+  .s5 {
+    min-width: 95vw;
+    padding-left: 5vw;
+    margin-top: 15vh;
+  }
+
+  .s6 {
+    min-width: 95vw;
+    padding-left: 5vw;
+    margin-top: 15vh;
+    font-size: 4vw;
+  }
+
+  .s7 {
+    min-width: 95vw;
+    padding-left: 5vw;
+    margin-top: 15vh;
+  }
+
+    .under {
+      /* opacity = last number rgb() -> 0=0% , 1=100% */
+      background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0)), linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,1));
+      background-size: 100% 0.1em, 0 0.1em;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 400ms;
+    }
+    
+    .under:hover,
+    .under:focus {
+      background-size: 0 0.1em, 100% 0.1em;
+    }
+
+  .s8 {
+    min-width: 95vw;
+    padding-left: 5vw;
+    margin-top: 5vh;
+  }
+
+  .s8 p {
+    font-size: 10vw;
+    font-weight: 600;
+  }
+
+  .cookies2 {
+    color:rgb(100, 100, 100);
+  }
+
+  /*sticky*/
+  .sticky {
+    position: sticky;
+    left: 0;
+  }
+
+
+  /* FOOTER ______________________________________*/
+ 
+  footer {
+    display: flex;
+    z-index: 1;
+    min-width: 95vw;
+    margin-left: 5vw;
+    margin-top: 65vh;
+  }
+
+  footer h2{
+    font-size: 1.3vw;
+    padding-top: 2vh;
+  }
+
+  footer p{
+    font-size: 1.3vw;
+    padding-right: 5vw;
+  }
+
+
+  /* RESPONSIVE MEDIA ______________________________________*/
+  /*MOBILE  ______________________________________*/
+  @media only screen and (max-width: 600px) {
+    
+    /* FONT SETTINGS */
+    p , .letter{
+      font-size: 8vw;
+    }
+
+    /* HEADER */
+    header {
+      margin-left: 10vw;
+    }
+
+    nav a{
+      font-size: 4vw;
+      padding-right: 5vw;
+    }
+
+    .down {
+      font-size: 6vw;
+      top: 90vh;
+      left: 80vw;
+    }
+
+    /* MAIN */
+    .alert {
+      left: 15vw;
+      top: 30vh;
+      width: 50vw;
+      height:20vh;
+      padding: 10% 0;
+      padding-left: 10%;
+      padding-right: 10%;
+      font-size: 6vw;
+    }
+
+    .closebtn {
+      bottom: 15%;
+    }
+
+    .s1 , .s2 , .s3 , .s4 , .s8{
+      padding-left: 10vw;
+      min-width: 90vw;
+    }
+
+    .s1 ,  .s8 p{
+      font-size: 18vw;
+    }
+  
+    .s2 {
+      margin-top: 32%;
+    }
+  
+    .s3 {
+      margin-top: 40%;
+    }
+  
+    .s4 {
+      margin-top: 90%;
+    }
+
+    .s8 {
+      margin-top: 5vh;
+    }
+
+
+    .s5 , .s6 , .s7{
+      padding-left: 15vw;
+      padding-right: 15vw;
+      min-width: 70vw;
+      margin-top: 15vh;
+    }
+
+    /* footer */
+    footer {
+      display: inline;
+      min-width: 90vw;
+      margin-top: 40vh;
+    }
+  
+    footer h2{
+      font-size: 5vw;
+      padding-top: 5vw;
+    }
+  
+    footer p{
+      font-size: 5vw;
+      padding-right: 10vw;
+    }
+
+  }
+
+  /* TABLET ______________________________________*/
+  @media only screen and (max-width: 992px){
+
+    nav a{
+      font-size: 2.5vw;
+    }
+
+    .down {
+      font-size: 3vw;
+      left: 90vw;
+    }
+
+    footer {
+      min-width: 95vw;
+      margin-top: 40vh;
+    }
+
+    footer h2{
+      font-size: 2.5vw;
+      padding-top: 5vw;
+    }
+  
+    footer p{
+      font-size: 2.5vw;
+      padding-right: 5vw;
+    }
+
+  }
